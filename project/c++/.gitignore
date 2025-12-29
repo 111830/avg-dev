@@ -61,3 +61,10 @@ CMakeUserPresets.json
 
 # C++ Modules Cache (Shto këtë pjesë)
 gcm.cache/
+
+
+# C++ Modules Cache
+std_build/
+my_modules/*.pcm
+*.pcm
+gcm.cache/
