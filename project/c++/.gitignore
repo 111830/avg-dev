@@ -58,3 +58,6 @@ CMakeUserPresets.json
 
 # debug information files
 *.dwo
+
+# C++ Modules Cache (Shto këtë pjesë)
+gcm.cache/
