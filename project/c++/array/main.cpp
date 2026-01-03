@@ -1,8 +1,4 @@
-import <iostream>;
-import <print>;
-#include <array>
-#include <cstddef>
-#include <vector>
+import std;
 
 using namespace std;
 

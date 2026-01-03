@@ -1,6 +1,5 @@
 /* Enumeration or enum is like a closed list. For example, in a program we can choose from different opportunities like days of the week or colors. An enumeration is a type that lets you define your own sequence so you can declare variables with values in that sequence, representing each piece like a named constant. */
-import <iostream>;
-import <print>;
+import std;
 #include <utility>
 
 enum class PieceType {

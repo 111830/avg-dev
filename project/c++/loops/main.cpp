@@ -1,5 +1,4 @@
-import <iostream>;
-import <print>;
+import std;
 
 using namespace std;
 

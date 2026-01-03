@@ -1,4 +1,4 @@
-import <print>;
+import std;
 
 namespace mycode {
     void foo() {

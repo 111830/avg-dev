@@ -1,5 +1,4 @@
-import <iostream>;
-import <print>;
+import std;
 import employee; // Import our employee module
 using namespace std;
 int main()

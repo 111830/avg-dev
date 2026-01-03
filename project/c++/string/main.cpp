@@ -1,6 +1,4 @@
-import <iostream>;
-import <print>;
-import <string>;
+import std;
 using namespace std;
 
 int main(){
