@@ -1,8 +1,0 @@
-Title My Webpage
-Heading And Heading Here
-
-A Bunch of content
-
-Another paragraf 
-
-And so one ... 
