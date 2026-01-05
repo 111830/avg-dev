@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     *u = 89;
     printf("%d\n", *u);
 
-    /* This one doesen't work!!!
+    /* This one doesn't work!!!
     int *u = NULL;
     printf("%p\n", u);
     *u = 89;
