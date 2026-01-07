@@ -35,19 +35,14 @@ void label(fish f) {
 
 int main(int argc, char* argv[]) {
     fish snappy = {
-        "Snappy",
-        "Piranha",
-        69,
-        4,
-        {
-            {
-                "Meat",
-                0.2
-            },
-            {
-                "swim in the jacuzzi",
-                7.5
-            }
+        .name = "Snappy",
+        .species = "Piranha",
+        .teeth = 69,
+        .age = 4,
+
+        .care = {
+          .food  = { .ingredients = "Meat", .weight = 0.2},
+          .exercise = { .description = "swim in the jacuzzi", .duration = 7.5}
         }
     };
 
