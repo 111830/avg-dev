@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+enum response_type {DUMP, SECOND_CHANCE, MARRIAGE};
+
+typedef struct{
+    char* name;
+    enum response_type type;
+}response;
+
+void dump(response r){
+    printf("Dear %s,\n", r.name);
+    puts("Unfortunately your last date contacted us to");
+    puts("say that they will not be seeing you again");
+}
+
+
+void second_chance(response r){    
+    printf("Dear %s,\n", r.name);
+    puts("Good news: your last date has asked us to");
+    puts("arrange another meeting. Please call ASAP.");
+}
+
+void marriage(response r){
+    printf("Dear %s,\n", r.name);
+    puts("Congratulation! Your last date has contacted");
+    puts("us with a proposal od marriage.");
+}
+
+void (*replies[])(response) = {dump, second_chance, marriage};
+
+int main(int argc, char* argv[]){
+    response r[] = {
+        {"Mike", DUMP}, {"Luis", SECOND_CHANCE},
+        {"Matt", SECOND_CHANCE}, {"William", MARRIAGE}
+    };
+
+    for (int i = 0; i < 4; i++){
+        response curr_response = r[i];
+
+        // curr_responds.type -> ENUM VALUE -> index to a function array
+        void (*handle_responds)(response) = replies[curr_response.type];
+        handle_responds(curr_response);
+
+        // or we can do this replies[curr_response.type](curr_response);
+    }
+
+    return 0;
+}
