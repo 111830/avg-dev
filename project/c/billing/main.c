@@ -14,7 +14,7 @@ int main(){
         printf("Price of item: ");
     }
 
-    printf("\nFinal tital: %.2f\n", total);
+    printf("\nFinal title: %.2f\n", total);
     printf("Number of items: %hi\n", count);
     return 0;
 }

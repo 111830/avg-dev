@@ -13,10 +13,10 @@ int main(int argc, char *argv[])
 {
     // Give a tracks list
     // Ask the user which track she is looking for
-    // Get the input and use it to search through all tracket
+    // Get the input and use it to search through all tracker
     // -> loops?
-    // Dispsplay any matches. (when input exist occurs within the track string)
-    // -> hint : strstr() mayby?
+    // Display any matches. (when input exist occurs within the track string)
+    // -> hint : strstr() maybe?
 
     char input[80];
 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     for(int i = 0; i < 5; i++){
         char* curr_tracks = tracks[i];
 
-        // Use strstr() to check if input accurs in curr_tracks
+        // Use strstr() to check if input accurse in curr_tracks
         char* occurrence = strstr(curr_tracks, input);
 
         if(occurrence != NULL){

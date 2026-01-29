@@ -2,7 +2,7 @@
 *Our program will:
 * 1. Ask for a character from the user
 * 2. Take that character and shift by some amount 
-* 3. Print the rezult
+* 3. Print the result
 */
 
 #include <stdio.h>
@@ -21,9 +21,9 @@ int main(){
         return 1;
     }
 
-    char rezult = input + shift;
+    char result = input + shift;
 
-    printf("%c\n", rezult);
+    printf("%c\n", result);
     
     return 0;
 }
