@@ -7,5 +7,6 @@ int main(int argc, char* argv[]){
         printf("The current value at index %d: %s\n", arg_idx,argv[arg_idx]);
     }
 
+    
     return 0;
 }
