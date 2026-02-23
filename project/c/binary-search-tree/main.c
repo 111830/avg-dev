@@ -1,76 +1,117 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct Node {
-    int value;
-    struct Node* left;
-    struct Node* right;
+  int value;
+  struct Node* left;
+  struct Node* right;
 } Node;
 
-void dosomething(Node* currRoot) {
-    printf("%d, ", currRoot->value);
+void doSomething(Node* currRoot) {
+  printf("%d, ", currRoot->value);
 }
 
-void inorder(Node* currRoot){
-    if(currRoot == NULL) {
-        return;
-    }
+void inorder(Node* currRoot) {
+  if (currRoot == NULL) {
+    return;
+  }
 
-    inorder(currRoot->left);
-    dosomething(currRoot);
-    inorder(currRoot->right);
+  inorder(currRoot->left);
+  doSomething(currRoot);
+  inorder(currRoot->right);
 }
 
 void preorder(Node* currRoot) {
-    if(currRoot == NULL) {
-        return;
-    }
+  if (currRoot == NULL) {
+    return;
+  }
 
-    dosomething(currRoot);
-    preorder(currRoot->left);
-    preorder(currRoot->right);
+  doSomething(currRoot);
+  preorder(currRoot->left);
+  preorder(currRoot->right);
 }
 
 void postorder(Node* currRoot) {
-    if(currRoot == NULL) {
-        return;
-    }
+  if (currRoot == NULL) {
+    return;
+  }
 
-    postorder(currRoot->left);
-    postorder(currRoot->right);
-    dosomething(currRoot);
+  postorder(currRoot->left);
+  postorder(currRoot->right);
+  doSomething(currRoot);
 }
 
-int main(int argc, char* argv[]){
-    Node nRoot = {.value = 20, .left = NULL, .right = NULL};
-    Node n10 = {.value = 10, .left = NULL, .right = NULL};
-    Node n30 = {.value = 30, .left = NULL, .right = NULL};
-    Node n5 = {.value = 5, .left = NULL, .right = NULL};
-    Node n15 = {.value = 15, .left = NULL, .right = NULL};
-    Node n25 = {.value = 25, .left = NULL, .right = NULL};
-    Node n35 = {.value = 35, .left = NULL, .right = NULL};
+Node* createNode(int value) {
+  Node* result = (Node*)malloc(sizeof(Node));
 
-    nRoot.left = &n10;
-    nRoot.right = &n30;
+  result->value = value;
+  result->left = NULL;
+  result->right = NULL;
 
-    n10.left = &n5;
-    n10.right = &n15;
+  return result;
+}
 
-    n30.left = &n25;
-    n30.right = &n35;
+void insertHelper(Node** root, Node* nodeToInsert) {
+  Node *currNode = (*root);
+  
+  if (currNode->left == NULL 
+        && currNode->right == NULL) {
 
-    // Test the inorder traversal
-    // 5, 10 , 15, 20, 25, 30, 35
-    puts("Inorder traversal");
-    inorder(&nRoot);
-    printf("\n");
+    if (nodeToInsert->value < currNode->value) {
+      currNode->left = nodeToInsert;
+    } else {
+      currNode->right = nodeToInsert;
+    }
 
-    puts("Preorder traversal");
-    preorder(&nRoot);
-    printf("\n");
+    return;
+  }
 
-    puts("Postorder traversal");
-    postorder(&nRoot);
-    printf("\n");
+  if (currNode->left == NULL 
+        && nodeToInsert->value < currNode->value) {
+    currNode->left = nodeToInsert;
 
-    return 0;
+    return;
+  }
+  if (currNode->right == NULL 
+        && nodeToInsert->value >= currNode->value) {
+    currNode->right = nodeToInsert;
+
+    return;
+  }
+  
+  if (nodeToInsert->value < currNode->value) {
+    insertHelper(&(currNode->left), nodeToInsert);
+  } else {
+    insertHelper(&(currNode->right), nodeToInsert);
+  }
+}
+
+void insert(Node**root, int value) {
+  Node* nodeToInsert = createNode(value);
+
+  if (*root == NULL) {
+    *root = nodeToInsert;
+    return;
+  }
+
+  insertHelper(root, nodeToInsert);
+}
+
+int main(int argc, char* argv[]) {
+  Node* nRoot = NULL;
+  int v = 20;
+
+  insert(&nRoot, v);
+  insert(&nRoot, 10);
+  insert(&nRoot, 30);
+  insert(&nRoot, 15);
+  insert(&nRoot, 35);
+  insert(&nRoot, 5);
+  insert(&nRoot, 25);
+  insert(&nRoot, 28);
+
+  inorder(nRoot);
+  printf("\n");
+
+  return 0;
 }
