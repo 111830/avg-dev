@@ -1,0 +1,5 @@
+# Ignore the folder where compiled files are placed
+/target/
+
+# Ignore backup files that some text editors might create
+**/*.rs.bk
