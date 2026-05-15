@@ -75,7 +75,7 @@ The Scrum Master is also accountable for the **Scrum Team's effectiveness**, hel
 - Coaching team members in self-management and cross-functionality
 - Helping the team focus on creating high-value Increments that meet the Definition of Done
 - Causing the removal of impediments to the team's progress
-- Ensuring all Scrum events take place and are positive, productive, and within the timebox
+- Ensuring all Scrum events take place and are positive, productive, and within the timbox
 
 **The Scrum Master serves the Product Owner by:**
 
