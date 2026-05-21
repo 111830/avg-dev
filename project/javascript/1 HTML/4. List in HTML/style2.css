@@ -1,0 +1,16 @@
+ol {
+  list-style: none;
+  counter-reset: name;
+}
+
+ol li {
+  counter-increment: name;
+}
+
+ol li::before {
+  content: 'Name ' counter(name) ') ';
+  color: #ff6f00;
+}
+ol li::after {
+  content: '.';
+}
