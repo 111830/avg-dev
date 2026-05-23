@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form in HTML</title>
+  </head>
+  <body>
+    <h1>Form in HTML</h1>
+    <form action="My_server" target="_blank" method="get">
+      <!--method="get"-->
+      <fieldset>
+        <legend>Personal Data</legend>
+
+        <label for="ID Persons">ID Persons: </label> <br />
+        <input type="text" id="ID Persons" name="ID Persons"
+          required="true" value="100"/>
+        <br />
+
+        <input type="hidden" id="sistem" name="sistem" value="SAP"/>
+
+        <label for="name">Name: </label> <br />
+        <input type="text" id="name" name="name" placeholder="Give a Name"
+          required="true"/>
+        <br />
+
+        <label for="surnumber">Surname: </label> <br />
+        <input type="text" id="surname" name="surname" placeholder="Give a Surname"
+        required="true"/>
+        <br />
+
+        <label for="number">Age: </label> <br />
+        <input type="number" id="number" name="number" required="true" /><br />
+
+        <label>Gender</label><br />
+        <input type="radio" id="female" name="genero" value="female" />
+        <label for="female">Female</label><br />
+        <input type="radio" id="male" name="genero" value="male" />
+        <label for="male">Male</label><br />
+
+        <label>Type favorite music</label><br />
+        <input type="checkbox" id="classic" name="music" value="classic" />
+        <label for="classic">Classic</label><br />
+        <input type="checkbox" id="jazz" name="music" value="jazz" />
+        <label for="jazz">jazz</label><br />
+
+        <label for="auto">Type of Car</label><br />
+        <select id="auto" name="auto">
+          <!--Multiplay = "True"-->
+          <option value="benz">Benz</option>
+          <option value="bmw">BMW</option>
+          <option value="volvo" selected="true">Volvo</option></select
+        ><br />
+
+        <label for="coment">Comment: </label><br />
+        <textarea id="coment" name="coment" rows="2" cols="30"
+        >Write what do you want to write: 
+        </textarea
+        ><br />
+
+        <label for="email">Email: </label> <br />
+        <input type="email" id="email" name="email" required="true" /><br />
+
+        <label for="password">Password: </label> <br />
+        <input type="password" id="password" name="password"
+          required="true"/>
+          <br />
+          <br />
+
+        <input type="submit" value="Enter" />
+        <input type="submit" formnovalidate="formnovalidate" value="Hang up" />
+        <input type="reset" value="Restablecer"/>
+      </fieldset>
+    </form>
+  </body>
+</html>
