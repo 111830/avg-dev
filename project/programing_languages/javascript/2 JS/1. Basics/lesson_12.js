@@ -1,6 +1,3 @@
-function Person(name, surname, email){
-}
-
 let person = {
     name: 'Lusi',
     surname: 'Ndregjoni',

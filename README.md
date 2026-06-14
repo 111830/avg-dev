@@ -21,10 +21,10 @@ This is what defines a real Software Engineer—the ability to build the tools t
 ## Learning Roadmap
 
 ### Programming Foundations
-| Header First C | Professional C++ | The Rust Book |
-| :---: | :---: | :---: |
-| <img src="https://m.media-amazon.com/images/I/71oTuwqLUSL._SY342_.jpg" width="160"> | <img src="https://m.media-amazon.com/images/I/81qqfxAlzwL._SY385_.jpg" width="160"> | <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1669769792i/63891183.jpg" width="160"> |
-| ✅ Finished |  ⚙️ In Progress | 🔜 Soon |
+| Header First C | Professional C++ | The Rust Book | Go Programming Language |
+| :---: | :---: | :---: | :---: |
+| <img src="https://m.media-amazon.com/images/I/71oTuwqLUSL._SY342_.jpg" width="160"> | <img src="https://m.media-amazon.com/images/I/81qqfxAlzwL._SY385_.jpg" width="160"> | <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1669769792i/63891183.jpg" width="160"> | <img src="https://m.media-amazon.com/images/I/7176uZZ75lL._SY342_.jpg" width="160"> | 
+| ✅ Finished |  ⚙️ In Progress | ⚙️ In Progress | ⚙️ In Progress | 
 
 ### Systems and Operating Systems
 | Operating System Concepts | Linux Kernel Development |
