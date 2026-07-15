@@ -46,7 +46,7 @@ class Order {
     constructor() {
         this._idOrder = ++Order.countOrder;
         this._products = [];
-        this._countProductAddition = 0;
+        // this._countProductAddition = 0;
     }
 
     get idOrder() {
@@ -65,7 +65,7 @@ class Order {
     calculateTotal() {
         let totalValue = 0;
         for(let product of this._products){
-            totalValue += products.price;
+            totalValue += product.price;
         }
 
         return totalValue;
@@ -82,4 +82,9 @@ class Order {
 }
 
 let product = new Products('Chips', 200);
-console.log(product.toString());
+let product1 = new Products('Lays', 50);
+
+let order1 = new Order();
+order1.additionProducts(product);
+order1.additionProducts(product);
+order1.showOrder();

@@ -106,3 +106,17 @@ function changeValueObject(p1) {
 
 changeValueObject(person);
 console.log(person); // Output: { name: 'Lusi', surname: 'Hysa' }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------
+// Callback function
+
+let imp = function Output(value) {
+    console.log(value);
+}
+
+function sum(ou1, ou2, functionCallBack){
+    let rez = ou1 + ou2;
+    functionCallBack(`Result ${rez}`);
+}
+
+sum(3, 4, imp);
