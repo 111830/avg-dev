@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Apply DOM with javascript</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <form id="formular" action="">
+    Name: <input type="text" name="name" value="Renis"/>
+    <br>
+    Surname: <input type="text" name="surname" value="Ndregjoni"/>
+    <br>
+  </form>
+  <button onclick="testValue()">Submit</button>
+  <div id="value"></div>
+
+  <script>
+    function testValue() {
+      let formular = document.forms['formular'];
+      let text = '';
+      let name = formular['name'];
+      let surname = formular['surname'];
+      text = name.value + '<br>' + surname.value;
+      document.getElementById('value').innerHTML = text;
+    }
+  </script>
+
+</body>
+</html>
